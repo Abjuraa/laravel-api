@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers\Api;
-
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Student;
+use Illuminate\Support\Str;
 
 class studentController extends Controller
 {
@@ -40,6 +40,7 @@ class studentController extends Controller
         $student->email = $request->email;
         $student->phone = $request->phone;
         $student->language = $request->language;
+        $student->token = Str::random(80);
         $student->save();
 
         return response()->json($student);
