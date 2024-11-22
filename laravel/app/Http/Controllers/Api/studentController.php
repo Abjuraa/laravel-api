@@ -46,6 +46,19 @@ class studentController extends Controller
         return response()->json($student);
     }
 
+    public function getStudentByToken($token){
+        $student = Student::where('token', $token)->first();
+
+        if(empty($student)){ 
+            return response()->json([
+                'message' => 'Estudiante no encontrado',
+                'status' => 404
+            ], 404);
+        } else {
+            return response()->json($student);
+        }
+    }
+
     public function updateStudent(Request $request, $id){
         if(Student::where('id', $id)->exists()){
             $student = Student::find($id);
