@@ -24,7 +24,7 @@ class Clientes extends Authenticatable implements JWTSubject
 
     public function getAuthPassword()
     {
-        return $this->password; // Especifica que este es el campo de la contraseña
+        return $this->password; 
     }
 
     public function getJWTIdentifier()
