@@ -14,7 +14,13 @@ return new class extends Migration
         Schema::create('clientes', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
+<<<<<<< Updated upstream
             $table->string('email');
+=======
+            $table->string('apellido');
+            $table->string('email');
+            $table->string('telefono');
+>>>>>>> Stashed changes
             $table->string('password');
             $table->timestamps();
         });
