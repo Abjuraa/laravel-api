@@ -87,13 +87,10 @@ class clientesController extends Controller
     public function register(Request $request){
         $validator = Validator::make($request->all(), [
             'nombre' => 'required|string|max:255',
-<<<<<<< Updated upstream
             'email' => 'required|string|email|max:255',
-=======
             'apellido' => 'required|string|max:255',
             'email' => 'required|string|email|max:255',
             'telefono' => 'required|string|max:255',
->>>>>>> Stashed changes
             'password' => 'required|string|min:6',
         ]);
 

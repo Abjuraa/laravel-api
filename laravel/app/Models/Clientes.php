@@ -18,23 +18,16 @@ class Clientes extends Authenticatable implements JWTSubject
 
     protected $fillable = [
         'nombre',
-<<<<<<< Updated upstream
         'email',
-=======
         'apellido',
         'email',
         'telefono',
->>>>>>> Stashed changes
         'password',
     ];
 
     public function getAuthPassword()
     {
-<<<<<<< Updated upstream
         return $this->password; 
-=======
-        return $this->password; // Especifica que este es el campo de la contraseña
->>>>>>> Stashed changes
     }
 
     public function getJWTIdentifier()
